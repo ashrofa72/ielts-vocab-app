@@ -30,7 +30,7 @@ export default function VocabularyList() {
             className="p-4 bg-white rounded-lg shadow-md border border-gray-200"
           >
             <strong className="text-primary">{item.word}</strong>: {item.meaning}
-            <p className="text-gray-600 italic mt-1">"{item.example}"</p>
+            <p className="text-gray-600 italic mt-1">'{item.example}'</p>
           </li>
         ))}
       </ul>
