@@ -22,15 +22,13 @@ export default function VocabularyList() {
 
   return (
     <div className="mt-8">
-      <h2 className="text-2xl font-bold text-secondary mb-4">Vocabulary List</h2>
-      <ul className="space-y-4">
+      <h2 className="text-xl font-bold mb-4">Vocabulary List</h2>
+      <ul>
         {vocabulary.map((item) => (
-          <li
-            key={item.id}
-            className="p-4 bg-white rounded-lg shadow-md border border-gray-200"
-          >
-            <strong className="text-primary">{item.word}</strong>: {item.meaning}
-            <p className="text-gray-600 italic mt-1">'{item.example}'</p>
+          <li key={item.id} className="p-4 border-b">
+            <strong>{item.word}</strong>: {item.meaning}
+            {/* Fixed: Escaped double quotes */}
+            <p className="text-gray-600 italic mt-1">{`"${item.example}"`}</p>
           </li>
         ))}
       </ul>
